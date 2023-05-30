@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - Class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        class person {
+            constructor(firstName, lastName,age) {
+                this.firstName = firstName
+                this.lastName = lastName
+                this.age =age
+            }
+            fullName() {
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+        const ramkrushna = new person('Ramkrushna','More',23)
+        document.querySelector('output').innerHTML =
+        `${ramkrushna.fullName()} is ${ramkrushna.age} years old.`
+    </script>  
+</body>
+</html>

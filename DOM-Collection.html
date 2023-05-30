@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-collection</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <main class="wrapper">
+        <h1>This is a heading</h1>
+        <p class="bold">This is first paragraph</p>
+        <p>This is a second paragraph</p>
+        <p>This is a third paragraph</p>
+        <output></output>
+    </main>
+
+    <script>
+        document.querySelector('output').innerHTML =
+        document.querySelectorAll('p')[2].innerHTML
+        //document.querySelectorAll('p').length 
+
+        //document.getElementByTagName('p')[2].innerHTML
+        //document.getElementsByClassName('bold')[1].innerHTML
+    </script>  
+</body>
+</html>

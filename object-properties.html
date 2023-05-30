@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Object Properties</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        const person = {
+            firstName: 'Suresh',
+            lastName: 'Gandhi',
+            age: 36,
+            hobbies: ['Playing', 'Dancing', 'Reading'],
+            employment : {
+                    comapany: 'Infosys',
+                    industry: 'IT'
+                },
+            fullName: function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+
+        person['city'] = 'Pune'
+
+        let text = ''
+        for(let i in person) {
+            text += `${i}: ${person[i]} <br>`
+        }
+
+        //delete person.age
+        document.querySelectorAll('h1')[0].innerHTML = 
+        text
+        // person.employment.comapany
+        // person.hobbies[0]
+        // person.age
+        // person.city
+    </script>
+</body>
+</html>

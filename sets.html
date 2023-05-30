@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Sets</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        let numbers = [10, 32, 21, 10, 35, 47, 21, 96]
+        let unique = new Set(numbers)
+        unique.add(12)
+        unique.add(36)
+        unique.add(10)
+        unique.delete(10)
+
+        let newSet = []
+
+        unique.forEach(function(value){
+            newSet.push(value)
+        })
+
+        document.querySelector('output').innerHTML = 
+        // numbers
+        // Array.from(unique)
+        // unique.has(10)
+        // newSet
+        // Array.from(unique.values())
+        unique.size
+    </script>
+</body>
+</html>

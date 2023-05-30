@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - If else</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .dark {
+            background: #35363a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <output></output>
+    <script>
+        /*
+            syntax:
+            
+            if(condition) {
+                code
+            } else if(condition 2) {
+                another code
+            } else {
+                default
+            }
+        */
+        let hours = new Date().getHours()
+        let greetings
+        
+        if(hours < 10)
+            greetings = 'Good Morning!'
+        else if(hours >= 10 && hours < 18) 
+            greetings = 'Good day!'
+        else greetings = 'Good evening!'
+
+        if(hours >= 18) 
+            document.querySelector('body').classList.add('dark')
+
+        document.querySelector('output').innerHTML = greetings
+    </script>
+</body>
+</html>

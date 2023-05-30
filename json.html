@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Json</title>
+    <link rel="stylesheet" href="Common.css">
+</head>
+<body>
+    <main class="wrapper">
+     <button onclick="getFile()" class="button">Click Here</button>
+       <output></output>
+    </main>
+        <script>
+            function getFile() {
+                const http = new XMLHttpRequest()
+    
+                http.onload = function() {
+                    if(this.status == 200) {
+                    let response = this.responseText
+                    let parse = JSON.parse(response)
+
+                    document.querySelector('output').innerHTML = 
+                    `${parse.people[0].firstName} ${parse.people[0].lastName} is ${parse.people[0].age} years old.`
+                    }
+                }
+                http.open('Get','Data.json')
+                http.send()
+            }
+        </script>
+</body>
+</html>

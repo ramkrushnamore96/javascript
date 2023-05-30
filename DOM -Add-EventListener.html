@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Add-EventListener</title>
+    <style>
+        .background {
+            background: gold;
+        }
+        h1{
+            background:lawngreen;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button>Click here</button>
+    <h1></h1>
+    <script>
+        let button = document.querySelector('button')
+        button.addEventListener('click',function(){
+            document.querySelector('h1').innerHTML = 'Hello-Friends!'
+        })
+
+        button.addEventListener('mouseover', function(){
+            document.querySelector('h1').classList.add('background')
+        })
+
+        button.addEventListener('mouseout', function(){
+            document.querySelector('h1').classList.remove('background')
+        })
+    </script>
+</body>
+</html>

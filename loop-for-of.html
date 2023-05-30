@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - loop-for-of</title>
+</head>
+<body>
+    <output></output>
+    <script>
+        // let javascript = 'Javascript'
+        // let text = ''
+        // for(let i of javascript) {
+        //     text += i + '<br>'
+        // }
+   
+        let javascript = 'Javascript'
+        const numbers = [20, 25, 55, 34, 22]
+        
+        let text ='<ul>'
+        for(let i of numbers) {
+            text += `<li>${i}</li>`
+        }
+        text += '</ul>'
+        
+        document.querySelector('output').innerHTML =
+        text
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Operater Precedence</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        // Grouping operator :: ()
+        let grouping = (100 + 50) * 3
+        
+        const person = {
+            firstName: 'Ganesh',
+            lastName: 'Pande',
+            age: 23
+        }
+
+        // Member of operator:: .,[]
+        let fullName = person.firstName + ' ' + person['lastName']
+
+        // Optional operator :: ?
+        let city = person?.city
+
+        // Optional operator :: ()
+        function abc() {}
+
+        // new operator :: new
+        let date = new Date()
+
+        // increment operator :: ++
+        let i = 0
+        i++
+
+        // decrement operator :: --
+        let d = 0
+        d--
+
+        // logical not operator :: !
+        let check = i !== d
+
+        // Bitwise not operator :: ~
+        let bitwiseNot = ~5
+
+        document.querySelector('output').innerHTML = 
+        // grouping
+        // fullName
+        // city
+        // i
+        // d
+        // check
+        bitwiseNot
+    </script>
+</body>
+</html>

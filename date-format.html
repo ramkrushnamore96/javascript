@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Date Format</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        let stringDate = Date()
+        let objectDate = new Date()
+
+        // Day 0: Sunday
+        let day = objectDate.getDay()
+
+        //  Today's date
+        let today = objectDate.getDate()
+
+        // Current Month - Start with 0:'January'
+        let month = objectDate.getMonth()
+
+        // Current year
+        let year = objectDate.getFullYear()
+
+        let date = new Date()
+
+        //  new Date('YYYY-MM-DD')
+        date = new Date('2022-01-02')
+
+        //  new Date('Mon DD, YYYY')
+        date = new Date('Mar 10, 2022')
+
+        //  new Date('DD Mon YYYY')
+        date = new Date('10 Mar 2022')
+
+        //  new Date('YY, M, DD')
+        date = new Date(99, 0, 12)
+        
+        document.querySelector('output').innerHTML = 
+        // typeof stringDate
+        // typeof objectDate
+        // day
+        // today
+        // month
+        // year
+
+        `${today} / ${month + 1} / ${year}`
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Set</title>
+</head>
+
+<body>
+    <output></output>
+    <script>
+        const number = [10, 10, 23, 24, 65, 75, 75]
+        const text = ['a', 'b', 'c', 'a', 'd', 'e', 'c']
+        const unique = new Set(text)
+
+        unique.add('p')
+        unique.add('q')
+        unique.add('z')
+        unique.delete('a')
+        unique.add('a')
+        unique.add('a')
+
+        let someText = ''
+
+        // unique.forEach(function (value) {
+        //     someText += value + '<br>'
+        // })
+
+        for(let i of unique.entries()) {
+            someText += i + '<br>'
+        }
+
+        document.querySelector('output').innerHTML =
+        // unique
+        // Array.from(unique)
+        // Array.from(unique.values())
+        // unique.has('z')
+        // unique.size
+        someText
+        // Array.from(unique.keys())
+    </script>
+</body>
+
+</html>

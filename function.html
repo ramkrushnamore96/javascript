@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="common.css">
+    <title>JS - Function</title>
+    <style>
+        .background{
+            background: rgb(243, 7, 7);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleBodyBackground()">Toggle Background</button>
+    <button onclick="changeText()">Change text</button>
+    <h1>This is heading</h1>
+    
+    <script>
+        function changeText() {
+            document.querySelector('h1').innerHTML = 'This is new heading'
+        }
+        
+        function toggleBodyBackground() {
+            document.querySelector('body').classList.toggle('background')
+        }
+    </script>
+</body>
+</html>

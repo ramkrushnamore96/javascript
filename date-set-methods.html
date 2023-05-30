@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Date Get Methods</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        let date = new Date()
+        let day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+        date.setFullYear(2020)
+        date.setMonth(10)
+        date.setDate(01)
+        date.setHours(09)
+        date.setMinutes(15)
+        date.setSeconds(20)
+        
+        document.querySelector('output').innerHTML =
+        date
+    </script>
+</body>
+</html>

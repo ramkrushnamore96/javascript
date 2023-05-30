@@ -1,0 +1,7 @@
+{
+    "people":[
+        {"firstName":"Ramkrushna","lastName":"More","age":23},
+        {"firstName":"Mangesh","lastName":"More","age":24},
+        {"firstName":"Amol","lastName":"Gade","age":25}
+    ]
+}

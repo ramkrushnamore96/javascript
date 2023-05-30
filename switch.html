@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Switch</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        let day
+        let currentDay = new Date().getDay()
+
+        // switch(currentDay) {
+        //     case 0: day = 'Sunday'
+        //     break;
+        //     case 1: day = 'Monday'
+        //     break;
+        //     case 2: day = 'Tuesday'
+        //     break;
+        //     case 3: day = 'Wednesday'
+        //     break;
+        //     case 4: day = 'Thusday'
+        //     break;
+        //     case 5: day = 'Friday'
+        //     break;
+        //     default: day = 'Saturday'
+        // }
+
+
+        switch(currentDay) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5: day = 'Looking forword to Weekend!'
+            break;
+            
+            case 0:
+            default: day = 'Happy weekend!'
+        }
+        
+        // let num = 1
+        // let text
+        // switch(num) {
+        //     case 0: text = 'off'
+        //     break;
+        //     case 1: text = 'on'
+        //     break;
+        //     default: text = 'No value found'
+        // }
+       
+        document.querySelector('output').innerHTML =
+        day
+
+    </script>
+</body>
+</html>

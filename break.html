@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - break</title>
+</head>
+<body>
+    <output></output>
+    <script>
+        let text=''
+        for(let i = 1; i <=20; i++) {
+            if(i==15) break
+            if(i==15 || i == 10)continue
+            text +='the number is' +i+ '<br>'
+        }
+        document.querySelector('output').innerHTML = text
+    </script> 
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Array Method Values</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        //  syntax: arrayName.values()
+        const city = ['Pune', 'Nagpur', 'Mumbai', 'Sangli', 'Solapur']
+        const values = city.values()
+
+        let text = ''
+        for(let i of values) {
+            text += i + '<br>'
+        }
+        
+        document.querySelector('output').innerHTML = 
+        text
+    </script>
+</body>
+</html>

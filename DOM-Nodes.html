@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - DOM nodes</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        section {
+            padding: 16px;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+        <section></section>
+    </main>
+    
+    <script>
+        let heading = document.createElement('h1')
+        let text = document.createTextNode('This is heading')
+        // let text = 'This is heading'
+        heading.appendChild(text)
+
+        document.querySelector('section').appendChild(heading)
+    </script>
+</body>
+</html>

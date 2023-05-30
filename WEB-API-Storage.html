@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-API-Storage</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        localStorage.setItem('firstName','Ramkrushna')
+        localStorage.setItem('lastName','More')
+        //localStorage.removeItem('lastName')
+        //localStorage.clear()
+
+        sessionStorage.setItem('username','ramkrushna more')
+        sessionStorage.removeItem('username')
+        //sessionStorage.clear()
+
+        document.querySelector('output').innerHTML =
+        'Hello,' + localStorage.getItem('firstName') + '' + localStorage.getItem('lastName')
+        'Username:' + sessionStorage.getItem('username')
+     </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - Map</title>
+</head>
+<body>
+    <output></output>
+    <script>
+        const city = new Map()
+        city.set('Pune',12)
+        city.set('Mumbai',22)
+        city.set('Solapur',25)
+        city.set('Akkalkot',28)
+        city.set('Latur',30)
+        city.set('Pimpri',32)
+
+        city.delete(true)
+        //city.clear()
+        
+        let text = ''
+        city.forEach(function(value, key){
+            text += `${key} : ${value}<br>`
+        })
+    document.querySelector('output').innerHTML =
+        //city
+        // Array.from(city)
+        // city.get('Pune')
+        // city.has('Pune')
+        //text 
+        //Array.from(city.keys()) 
+       //Array.from(city.values())
+        city.size
+    </script>  
+</body>
+</html>

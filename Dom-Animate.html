@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            background:gold;
+            position: relative;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background: black;
+            position: absolute;
+            box-shadow:  0 0 2px rgb (0 0 0 / 15%);
+            padding: 0;
+            margin: 0;
+    
+        }
+        .button {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="move()" class="button">Click Here</button>
+    <section class="wrapper">
+        <article class="box"></article>
+    </section>
+
+    <script>
+        function move(){
+            let id = null
+            let box = document.querySelector('.box')
+            let position = 0
+
+            clearInterval(id)
+            id = setInterval(animation, 1)
+            function animation(){
+                if (position == 150) clearInterval(id)
+                else {
+                    position++
+                    box.style.top = position + 'px'
+                    box.style.left = position + 'px'
+                }
+            }
+        }
+    </script>
+</body>
+</html>

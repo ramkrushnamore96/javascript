@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - array-sort-methods</title>
+    <link rel="stylsheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        const country =['India', 'China', 'USA', 'UK', 'France']
+        const numbers = [20,22,40,55,754]
+
+        numbers.sort(function()
+        {return 0.5 - Math.random()})
+        document.querySelector ('output').innerHTML=
+        country.sort()
+        // numbers 
+        // Math.max(...numbers)
+    </script>
+</body>
+</html>

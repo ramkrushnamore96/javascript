@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js - Class-inheritance</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        class person {
+            constructor(firstName,lastName,age){
+                this.firstName = firstName
+                this.lastName = lastName
+                this.age = age
+            }
+
+            birthYear() {
+                let year = new Date().getFullYear()
+                return year - this.age
+            }
+
+            fullName() {
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+
+        class personal extends person {
+            constructor(firstName,lastName,city,gender) {
+                super(firstName,lastName)
+                this.city = city
+                this.gender = gender
+            }
+
+            show(){
+                return `${this.fullName()} is stay in ${this.city}.`
+            }
+        }
+
+        let ramkrushna = new personal('ramkrushna','More','Chikhli-pune','Male')
+
+        document.querySelector('output').innerHTML = 
+        ramkrushna.show()
+    </script>
+</body>
+</html>

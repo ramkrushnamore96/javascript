@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - String search</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        let text = 'This is some text. And this is some anther text'
+
+        /*  syntax
+            text.indexOf('word', start position)
+            text.lastIndexOf('word', start position)
+            text.search('word')
+            text.match('word', start position)
+            text.matchAll('word')
+            text.includes('word', start position)
+            text.startsWith('word', start position)
+            text.endsWith('word', start position)
+        */
+
+        document.querySelector('output').innerHTML = 
+        // text
+        // text.indexOf('some', 20)
+        // text.lastIndexOf('some', 20)
+        // text.search('some')
+        // text.match(/Is/ig) 
+        // Array.from(text.matchAll(/Is/ig))
+        // text.includes('text', 20)
+        // text.startsWith('This', 2)
+        text.endsWith('text', 1)
+        
+    </script>
+</body>
+</html>

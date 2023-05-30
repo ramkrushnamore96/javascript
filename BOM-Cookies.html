@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <main class="wrapper">
+        <output></output>
+    </main>
+
+    <script>
+        document.cookie = 'firstName = Ramkrushna; expires=Sun Mar 01 2025 12:55:45 GMT+0540;'
+        document.cookie = 'lastName = More; expires=Sun Mar 01 2025 12:55:45 GMT+0540;'
+
+        document.querySelector('output').innerHTML = document.cookie
+         console.log(document.cookie)
+    </script>  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Object iterables</title>
+</head>
+
+<body>
+    <output></output>
+    <script>
+        let result = {}
+
+        result[Symbol.iterator] = function() {
+            let count = 0
+            let done = false
+
+            return {
+                next() {
+                    count += 10
+                    if (count == 100) done = true
+
+                    return {
+                        value: count,
+                        done: done
+                    }
+                }
+            }
+        }
+
+        let text = ''
+        for (let i of result) {
+            text += i + '<br>'
+        }
+        document.querySelector('output').innerHTML =
+        text
+    </script>
+</body>
+
+</html>

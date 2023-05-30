@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - For in loop</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <output></output>
+    <script>
+        const person = {
+            firstName: 'Ganesh',
+            lastName: 'Patil',
+            age: 23,
+            gender: 'male'
+        }
+
+        let text = ''
+        for(let i in person) {
+            text += i + ': ' + person[i] + '<br>'
+        }
+
+        // const numbers = [10, 25, 65, 32, 22, 65]
+        
+        // let text ='<ul>'
+        // for(let i in numbers) {
+        //     text += `<li>${numbers[i]}</li>`
+        // }
+        // text += '</ul>'
+
+        document.querySelector('output').innerHTML =
+        text
+    </script>
+</body>
+</html>

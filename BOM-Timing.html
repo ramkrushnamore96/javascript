@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - BOM-Timing</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <main class="wrapper">
+        <button onclick="setTimeout(hello,2000)">Click here</button>
+        <button onclick="clearInterval(time)">Stop Time</button>
+
+        <output></output>
+    </main>
+
+    <script>
+        let output = document.querySelector('output')
+
+        function hello(){
+            output.innerHTML = 'Good Morning!'
+        }
+
+        let time = setInterval(timer,1000)
+        function timer() {
+            let date = new Date() 
+                output.innerHTML = date.toString()
+        }
+    </script>
+</body>
+</html>

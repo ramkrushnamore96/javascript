@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Api-GeoLocation</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <main class="wrapper">
+        <button onclick="geoLocation()" class="button">Get location</button>
+        <output></output>
+    </main>
+
+    <script>
+        let output = document.querySelector('output')
+
+        function geoLocation(){
+            if(navigator.geolocation) navigator.geolocation.getCurrentPosition(showLocation,showError)
+            else output.innerHTML = 'Your browser does not support Geolocation'
+        }
+
+        function showLocation(position) {
+            output.innerHTML = 
+            `Latitude: ${position.coords.latitude}<br>
+            Longitude: ${position.coords.longitude}`
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION-DENIED: output.innerHTML = 'User denied the request for Geolocation!'
+                break;
+                case error.UNAVAILABLE: output.innerHTML = 'Location information is unavailable!'
+                break;
+                case error.TIMEOUT: output.innerHTML = 'The request to get user location timed out!'
+                break;
+                default: output.innerHTML = 'An unknown error occurred!'
+            }
+        }
+    </script>
+</body>
+</html>

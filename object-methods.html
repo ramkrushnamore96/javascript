@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Object-Methods</title>
+</head>
+<body>
+    <output></output>
+    <script>
+        const person = {
+            firstName: 'Ramkrushna',
+            lastName: 'More',
+            age: 23,
+            hobbies: ['Swimming', 'Cricket', 'Riding'],
+            employment: {
+                company: 'Inteva-Products',
+                industry: 'Pvt.Ltd'
+            },
+
+            fullName: function() {
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+
+        person.location = function (city, country) {
+            return `${city}, ${country}`
+        }
+
+        document.querySelector('output').innerHTML =`${person.fullName()} lived in ${person.location('Pimpri-Chinchwad', 'Maharashtra')}.`
+    </script>
+</body>
+</html>

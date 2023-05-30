@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Events</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .background{
+            background: url(images/2a1b5851e05882d0929b5f5c0b6fc7b3.jpg) center no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body onload="addBackground()">
+    <section class="wrapper">
+        <button>Click-here</button>
+       <output></output>
+       <button class="button" onmouseenter="someText(this)" onmouseleave="someAnotherText(this)" id="button">This is button</button>
+    </section>
+
+    <script>
+        document.querySelector('button').onclick = text
+
+        function text(){
+            document.querySelector('output').innerHTML = 'Hello-Friends🙂'
+        }
+
+        function addBackground() {
+            document.querySelector('body').classList.add('background')
+        }
+
+        function someText(element){
+            element.innerHTML = 'New text!'
+        }
+
+        function someAnotherText(element) {
+            element.innerHTML = 'This is button'
+        }
+    </script> 
+</body>
+</html>

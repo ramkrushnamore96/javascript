@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json-Stringify</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <main class="wrapper">
+        <output></output>
+    </main>
+    <script>
+        const person = {
+            firstName : 'Ramkrushna',
+            lastName: 'More',
+            age:23
+        }
+        document.querySelector('output').innerHTML = JSON.stringify(person)
+    </script>
+</body>
+</html>

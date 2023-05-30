@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Object-display</title>
+</head>
+<body>
+    <output></output>
+    <script>
+        const person = {
+            firstname:'Ramkrushna',
+            lastName:'More',
+            age:23
+        }
+
+        let text = ''
+        for(let i in person) {
+            text+= `${i} : ${person}[i]} <br>`
+        }
+         
+        let newArray = Object.values(person)
+        document.querySelector('output').innerHTML = 
+        //Object.Keys(person)
+        Object.values(person)
+        // Person
+        //text
+        //Array.isArray(newArray)
+        //JSON.stringify(Person)
+    </script>
+</body>
+</html>
